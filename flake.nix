@@ -14,10 +14,13 @@
           devShell = mkShell {
             buildInputs = [
               asciiquarium
+              htop
+              tealdeer
               (python310.withPackages
                 (python-packages: with python-packages; [
                   numpy
                   matplotlib
+                  scipy
                 ])
               )
             ];
